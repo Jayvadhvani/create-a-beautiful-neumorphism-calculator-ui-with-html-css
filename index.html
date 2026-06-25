@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="en"><head>
+  
+  
+  <meta charset="UTF-8">
+  <title>Create a Beautiful Neumorphism Calculator UI with HTML &amp; CSS</title>
+  <style>
+    body { background-color: #E0E5EC; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; margin: 0; }
+    .calculator { padding: 30px; border-radius: 30px; box-shadow: 9px 9px 16px rgb(163,177,198,0.6), -9px -9px 16px rgba(255,255,255, 0.5); }
+    .display { width: 100%; height: 80px; margin-bottom: 30px; border-radius: 15px; box-shadow: inset 6px 6px 10px 0 rgba(163, 177, 198, 0.6), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5); text-align: right; border: none; font-size: 32px; padding: 20px; box-sizing: border-box; background: transparent; color: #4d5766; outline: none;}
+    .keys { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    button { width: 60px; height: 60px; border-radius: 50%; border: none; font-size: 20px; font-weight: bold; color: #4d5766; background-color: #E0E5EC; box-shadow: 6px 6px 10px rgb(163,177,198,0.6), -6px -6px 10px rgba(255,255,255, 0.5); cursor: pointer; transition: 0.1s; display: flex; justify-content: center; align-items: center;}
+    button:active { box-shadow: inset 4px 4px 6px 0 rgba(163, 177, 198, 0.6), inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5); color: #04AA6D; }
+    .zero { grid-column: span 2; width: 100%; border-radius: 30px; }
+    .op { color: #f97316; }
+    .eq { color: #fff; background-color: #f97316; box-shadow: 6px 6px 10px rgba(249, 115, 22, 0.4), -6px -6px 10px rgba(255,255,255, 0.5); }
+    .eq:active { box-shadow: inset 4px 4px 6px 0 rgba(194, 65, 12, 0.6), inset -4px -4px 6px 0 rgba(253, 186, 116, 0.5); color: #fff;}
+  </style>
+
+            <meta name="description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="robots" content="index, follow">
+            <meta property="og:title" content="Create a Beautiful Neumorphism Calculator UI with HTML &amp; CSS">
+            <meta property="og:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta property="og:image" content="https://codescompiler.com/images/posts/css-neumorphism-calculator.png">
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Create a Beautiful Neumorphism Calculator UI with HTML &amp; CSS">
+            <meta name="twitter:description" content="A beautiful component imported via Developer Studio AI.">
+            <meta name="twitter:image" content="https://codescompiler.com/images/posts/css-neumorphism-calculator.png">
+          </head>
+<body>
+
+<!-- ── CODESCOMPILER DEMO HEADER ── -->
+<style>
+  #cc-demo-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    height: 48px;
+    background: #1a1b26;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: white;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999999;
+  }
+  #cc-demo-header a { text-decoration: none; color: white; }
+  .cc-logo { font-size: 14px; font-weight: 900; }
+  .cc-logo span { color: #04aa6d; }
+  .cc-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.12); margin: 0 12px; }
+  .cc-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.65); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .cc-actions { display: flex; gap: 8px; }
+  .cc-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    color: rgba(255,255,255,0.7);
+  }
+  .cc-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+  .cc-btn svg { width: 14px; height: 14px; }
+  @media (max-width: 600px) {
+    .cc-title { display: none; }
+    .cc-btn span { display: none; }
+  }
+</style>
+<header id="cc-demo-header">
+  <div style="display: flex; align-items: center; overflow: hidden;">
+    <a href="https://codescompiler.com" class="cc-logo" target="_blank" rel="dofollow"><span>Codes</span>Compiler</a>
+    <div class="cc-sep"></div>
+    <h1 class="cc-title" title="Create a Beautiful Neumorphism Calculator UI with HTML & CSS" style="margin: 0; font-size: 13px; font-weight: 600;">📺 Create a Beautiful Neumorphism Calculator UI with HTML & CSS</h1>
+  </div>
+  <div class="cc-actions">
+    <a href="https://codescompiler.com/blog/css-neumorphism-calculator" class="cc-btn" target="_blank" rel="dofollow" title="Read the full post">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+      <span>Back to Post</span>
+    </a>
+    <a href="index.html" class="cc-btn" target="_blank" download="css-neumorphism-calculator.html" title="Download source file">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+      <span>Download</span>
+    </a>
+    <button onclick="document.getElementById('cc-demo-header').style.display='none'" class="cc-btn" title="Hide header for fullscreen view">
+      <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l5-5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+      <span>Fullscreen</span>
+    </button>
+  </div>
+</header>
+<!-- ================================== -->
+
+  <div class="calculator">
+    <input type="text" class="display" id="display" disabled="" value="0">
+    <div class="keys">
+      <button class="op" onclick="clr()">C</button>
+      <button class="op">±</button>
+      <button class="op">%</button>
+      <button class="op" onclick="append('/')">÷</button>
+      <button onclick="append('7')">7</button>
+      <button onclick="append('8')">8</button>
+      <button onclick="append('9')">9</button>
+      <button class="op" onclick="append('*')">×</button>
+      <button onclick="append('4')">4</button>
+      <button onclick="append('5')">5</button>
+      <button onclick="append('6')">6</button>
+      <button class="op" onclick="append('-')">−</button>
+      <button onclick="append('1')">1</button>
+      <button onclick="append('2')">2</button>
+      <button onclick="append('3')">3</button>
+      <button class="op" onclick="append('+')">+</button>
+      <button class="zero" onclick="append('0')">0</button>
+      <button onclick="append('.')">.</button>
+      <button class="eq" onclick="calc()">=</button>
+    </div>
+  </div>
+  <script>
+    const d = document.getElementById('display');
+    function append(val) { if(d.value==='0') d.value=val; else d.value+=val; }
+    function clr() { d.value='0'; }
+    function calc() { try { d.value = eval(d.value); } catch(e){ d.value='Err'; } }
+  </script>
+
+
+</body></html>
